@@ -1,0 +1,113 @@
+
+<!-- klavyeden 2 değer al yas 30dan büyük ve adres kepeze eşit olursa 5 kere işe alındınız aksi takdirde 5 kez biz sizi araraız -->
+
+<!-- yaşı 18den büyükse 6 defa ehliyet alabilirsin yazsın aksi takdirde 5 kez biz sizi ararız -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let sayi=parseInt(prompt("bir sayi giriniz:"));
+        let adres=prompt("adres giriniz:");
+
+        if(sayi>30 && adres=="kepez"){
+            for(let i=0;i<5;i++){
+                console.log("işe alındınız");
+            }
+        }else{
+            for(let i=0;i<5;i++){
+            console.log("biz sizi ararız");
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        let yas=parseInt(prompt("yaşı giriniz:"));
+        let sayac=0;
+        if(yas>=18){
+            while(sayac<6){
+                console.log("ehliyet alabilirsin");
+                sayac++;
+            }
+        }else{
+            console.log("ehliyet alamazsın");
+        }
+    </script> -->
+
+    <!-- kullanıcının girdiği metni istenilen adet kadar ekrana yazdır -->
+
+
+    
+    <!-- <script>
+       let metin=window.prompt("metin giriniz:");
+       let adet=window.parseInt(prompt("metni kaç defa yazdırmak istiyorsun?"));
+
+       for(let i=0;i>=adet;i++){
+        document.write(metin+"<br>");
+       }
+
+    </script> -->
+
+    <!-- KAYAN YAZI -->
+<!-- 
+    <div id="yazi">HELLO WORLD!</div>
+    <script>
+        kayanYazi=function(nesne,zaman){
+            let yaziNesne=nesne;
+
+            setInterval(function(){
+                let yazi=yaziNesne.innerHTML;
+                let harf=yazi.substring(0,1);
+                let kalan=yazi.substring(1,yazi.length);
+
+                kalan=kalan+harf;
+                yaziNesne.innerHTML=kalan;
+            },zaman);
+        }
+
+        var nesne=document.getElementById("yazi");
+        kayanYazi(nesne,250);
+    </script>-->
+
+
+    <div id="saat"></div>
+
+<script>
+    function dijitalSaat() {
+        let now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        var timeString = hours + ':' + minutes + ':' + seconds;
+
+        document.getElementById('saat').textContent = timeString;
+    }
+
+    dijitalSaat();
+    setInterval(dijitalSaat, 1000);
+</script>
+
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    #saat{
+        font-size: 125px;
+        color: orangered;
+    }
+</style>
+
+</body>
+</html>
